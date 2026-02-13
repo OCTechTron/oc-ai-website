@@ -117,14 +117,14 @@ nav {
 }
 
 .btn-primary {
-    background: #FFFFFF;
-    color: var(--grey-900);
+    background: var(--blue);
+    color: #FFFFFF;
     font-weight: 700;
 }
 
 .btn-primary:hover {
-    background: var(--blue-light);
-    color: var(--grey-900);
+    background: var(--blue-dark);
+    color: #FFFFFF;
     transform: translateY(-1px);
     box-shadow: 0 4px 20px var(--blue-glow-strong);
 }

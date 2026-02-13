@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started | OC-AI by Overclocked Technologies</title>
+    <meta name="description" content="Get your own personal AI assistant. Fill out our quick form and we'll set up a free consultation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .form-section {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--grey-200);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group .hint {
+            color: var(--grey-500);
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background: var(--grey-800);
+            border: 1px solid var(--grey-700);
+            border-radius: 10px;
+            color: var(--grey-100);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px var(--blue-glow);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: var(--grey-500);
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%236B6F7A'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+            cursor: pointer;
+        }
+
+        .form-select option {
+            background: var(--grey-800);
+            color: var(--grey-100);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-submit {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .form-note {
+            text-align: center;
+            color: var(--grey-500);
+            font-size: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .form-success h2 {
+            color: var(--white);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-success p {
+            color: var(--grey-400);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .form-success .checkmark {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html" class="nav-logo">
+        <span class="nav-logo-text"><span>OC</span>-AI</span>
+    </a>
+    <div class="nav-links">
+        <a href="index.html#products">Products</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="contact.html" class="btn btn-primary">Get Started</a>
+    </div>
+</nav>
+
+<!-- FORM -->
+<section class="hero" style="min-height:auto;padding:10rem 2rem 2rem;">
+    <div class="hero-badge">
+        Free consultation — no commitment
+    </div>
+    <h1>Let's build your <span class="accent">AI</span>.</h1>
+    <p>Fill out this quick form and we'll reach out to schedule a free consultation. We'll figure out which OC-AI is right for you.</p>
+</section>
+
+<section style="padding-top:0;">
+    <div class="form-section" id="contact-form">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="ocai-form">
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>First Name *</label>
+                    <input type="text" name="first_name" class="form-input" placeholder="John" required>
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" name="last_name" class="form-input" placeholder="Smith">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Email *</label>
+                <input type="email" name="email" class="form-input" placeholder="john@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone <span class="hint">(optional)</span></label>
+                <input type="tel" name="phone" class="form-input" placeholder="(555) 123-4567">
+            </div>
+
+            <div class="form-group">
+                <label>Which OC-AI interests you? *</label>
+                <select name="product" class="form-select" required>
+                    <option value="" disabled selected>Choose one...</option>
+                    <option value="companion">🤝 OC-AI Companion — Conversation & companionship ($1,250)</option>
+                    <option value="personal">⚡ OC-AI Personal — Personal assistant ($1,500)</option>
+                    <option value="home">🏠 OC-AI Home — Smart home + assistant ($2,000)</option>
+                    <option value="professional">💼 OC-AI Professional — Business professional ($2,500)</option>
+                    <option value="business">🏢 OC-AI Small Business — Team operations ($3,500+)</option>
+                    <option value="not-sure">🤔 Not sure — help me decide</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Who is this for? *</label>
+                <select name="recipient" class="form-select" required>
+                    <option value="" disabled selected>Choose one...</option>
+                    <option value="myself">Myself</option>
+                    <option value="parent">My parent / family member</option>
+                    <option value="spouse">My spouse / partner</option>
+                    <option value="my-business">My business</option>
+                    <option value="gift">It's a gift</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Location <span class="hint">(city & state)</span></label>
+                <input type="text" name="location" class="form-input" placeholder="McDonough, GA">
+            </div>
+
+            <div class="form-group">
+                <label>Tell us a bit about what you're looking for <span class="hint">(optional)</span></label>
+                <textarea name="message" class="form-textarea" placeholder="Example: I want an AI that checks my email, reminds me about appointments, and helps me write proposals for my consulting business."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>How did you hear about us? <span class="hint">(optional)</span></label>
+                <select name="referral" class="form-select">
+                    <option value="" disabled selected>Choose one...</option>
+                    <option value="search">Google / Search engine</option>
+                    <option value="social">Social media</option>
+                    <option value="friend">Friend / Family referral</option>
+                    <option value="overclockedtech">Overclocked Technologies website</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Honeypot for spam -->
+            <input type="text" name="_gotcha" style="display:none">
+
+            <button type="submit" class="btn btn-primary btn-large form-submit">Send — Get My Free Consultation</button>
+
+            <p class="form-note">
+                We'll respond within 24 hours. No spam, no pressure. Just a conversation about what AI can do for you.
+            </p>
+        </form>
+
+        <!-- Success message (shown after submit) -->
+        <div class="form-success" id="form-success">
+            <div class="checkmark">✅</div>
+            <h2>We got your message!</h2>
+            <p>Thanks for reaching out. We'll review your info and get back to you within 24 hours to schedule your free consultation.</p>
+            <br>
+            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-brand"><span>OC</span>-AI</div>
+    <div class="footer-sub">A product of Overclocked Technologies</div>
+    <div class="footer-location">McDonough, GA · tron@mcdonald-net.com</div>
+</footer>
+
+<script>
+    // Handle form submission
+    const form = document.getElementById('ocai-form');
+    const success = document.getElementById('form-success');
+    
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+            
+            if (response.ok) {
+                form.style.display = 'none';
+                success.style.display = 'block';
+            } else {
+                // Fallback: mailto
+                const data = Object.fromEntries(formData);
+                const subject = encodeURIComponent(`OC-AI Inquiry — ${data.first_name} ${data.last_name}`);
+                const body = encodeURIComponent(
+                    `Name: ${data.first_name} ${data.last_name}\n` +
+                    `Email: ${data.email}\n` +
+                    `Phone: ${data.phone || 'N/A'}\n` +
+                    `Product: ${data.product}\n` +
+                    `For: ${data.recipient}\n` +
+                    `Location: ${data.location || 'N/A'}\n` +
+                    `Message: ${data.message || 'N/A'}\n` +
+                    `Referral: ${data.referral || 'N/A'}`
+                );
+                window.location.href = `mailto:tron@mcdonald-net.com?subject=${subject}&body=${body}`;
+            }
+        } catch (err) {
+            // Fallback: mailto
+            alert('Form service unavailable. Opening email instead.');
+            const data = Object.fromEntries(formData);
+            const subject = encodeURIComponent(`OC-AI Inquiry — ${data.first_name}`);
+            window.location.href = `mailto:tron@mcdonald-net.com?subject=${subject}`;
+        }
+    });
+</script>
+
+</body>
+</html>

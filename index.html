@@ -3,12 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OC-AI | Personal AI by Overclocked Technologies</title>
-    <meta name="description" content="Your own personal AI assistant. Always on, always private, always yours. By Overclocked Technologies.">
+    
+    <!-- SEO Meta Tags -->
+    <title>OC-AI | Personal AI Assistant Setup | McDonough GA | Overclocked Technologies</title>
+    <meta name="description" content="Professional personal AI assistant setup in McDonough GA. Get your own Claude-powered AI on Mac Mini hardware. $1,500-2,500 setup by Overclocked Technologies. Always on, always private, always yours.">
+    <meta name="keywords" content="personal AI assistant, AI setup McDonough GA, Claude AI setup, private AI assistant, Overclocked Technologies, Georgia AI services">
+    <meta name="author" content="Overclocked Technologies">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ai.overclockedtech.net/">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="OC-AI | Personal AI Assistant Setup | McDonough GA">
+    <meta property="og:description" content="Get your own Claude-powered personal AI assistant. Professional setup by Overclocked Technologies. Always on, always private, always yours.">
+    <meta property="og:image" content="https://ai.overclockedtech.net/og-image.jpg">
+    <meta property="og:url" content="https://ai.overclockedtech.net/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="OC-AI by Overclocked Technologies">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OC-AI | Personal AI Assistant Setup">
+    <meta name="twitter:description" content="Get your own Claude-powered personal AI assistant. Professional setup in McDonough GA.">
+    <meta name="twitter:image" content="https://ai.overclockedtech.net/og-image.jpg">
+    
+    <!-- Local Business Verification -->
+    <meta name="google-site-verification" content="PLACEHOLDER_VERIFICATION_CODE">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER123"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PLACEHOLDER123');
+        
+        // Track contact form submissions
+        function trackContact(method) {
+            gtag('event', 'contact', {
+                'event_category': 'engagement',
+                'event_label': method,
+                'value': 1
+            });
+        }
+    </script>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Overclocked Technologies",
+        "alternateName": "OC-AI",
+        "description": "Professional personal AI assistant setup services",
+        "url": "https://ai.overclockedtech.net",
+        "telephone": "+1-XXX-XXX-XXXX",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "McDonough",
+            "addressRegion": "GA",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 33.4473,
+            "longitude": -84.1469
+        },
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 33.4473,
+                "longitude": -84.1469
+            },
+            "geoRadius": 50000
+        },
+        "priceRange": "$1500-$2500",
+        "paymentAccepted": "Cash, Check, Credit Card",
+        "openingHours": "Mo-Fr 09:00-17:00",
+        "sameAs": [
+            "https://overclockedtech.net"
+        ]
+    }
+    </script>
     <style>
         :root {
             --blue: #5BA4D9;
@@ -544,7 +627,7 @@
         <a href="#products">Products</a>
         <a href="#how-it-works">How It Works</a>
         <a href="#features">Features</a>
-        <a href="contact.html" class="btn btn-primary">Get Started</a>
+        <a href="contact.html" class="btn btn-primary" onclick="trackContact('nav_get_started')">Get Started</a>
     </div>
 </nav>
 
@@ -629,7 +712,7 @@
                     <li>Learns your preferences over time</li>
                     <li>24/7 availability via your phone</li>
                 </ul>
-                <a href="personal.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get Started</a>
+                <a href="personal.html" class="btn btn-primary" style="width:100%;justify-content:center;" onclick="trackContact('personal_get_started')">Get Started</a>
             </div>
 
             <!-- PROFESSIONAL -->
@@ -704,7 +787,7 @@
 <!-- TAGLINE -->
 <section class="tagline-section">
     <p class="tagline">We started by making <span class="accent">hardware faster</span>.<br>Now we make <span class="accent">people faster</span>.</p>
-    <a href="contact.html" class="btn btn-primary btn-large">Get Your AI Today</a>
+    <a href="contact.html" class="btn btn-primary btn-large" onclick="trackContact('hero_cta')">Get Your AI Today</a>
 </section>
 
 <!-- CTA / CONTACT -->
@@ -712,8 +795,8 @@
     <h2>Ready to meet your AI?</h2>
     <p>Book a free consultation. We'll figure out which OC-AI is right for you.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="mailto:tron@mcdonald-net.com" class="btn btn-primary btn-large">📧 Email Us</a>
-        <a href="https://overclockedtech.net" class="btn btn-secondary btn-large">🌐 Overclocked Technologies</a>
+        <a href="mailto:tron@mcdonald-net.com" class="btn btn-primary btn-large" onclick="trackContact('email_click')">📧 Email Us</a>
+        <a href="https://overclockedtech.net" class="btn btn-secondary btn-large" onclick="trackContact('main_website_click')" target="_blank">🌐 Overclocked Technologies</a>
     </div>
     <p style="margin-top:2rem;color:var(--grey-500);font-size:0.9rem;">
         Serving the greater Atlanta & McDonough, GA area — and available nationwide for remote setup.

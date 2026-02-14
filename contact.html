@@ -3,8 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Started | OC-AI by Overclocked Technologies</title>
-    <meta name="description" content="Get your own personal AI assistant. Fill out our quick form and we'll set up a free consultation.">
+    
+    <!-- SEO Meta Tags -->
+    <title>Get Started | Personal AI Setup McDonough GA | OC-AI by Overclocked Technologies</title>
+    <meta name="description" content="Get your personal AI assistant today! Free consultation in McDonough GA. Professional Claude AI setup on Mac Mini hardware. Fill out our quick form to get started.">
+    <meta name="keywords" content="personal AI setup, AI assistant McDonough GA, Claude AI consultation, OC-AI contact, get AI assistant, Overclocked Technologies contact">
+    <meta name="author" content="Overclocked Technologies">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ai.overclockedtech.net/contact.html">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Get Started | Personal AI Setup McDonough GA">
+    <meta property="og:description" content="Get your personal AI assistant today! Free consultation and professional setup by Overclocked Technologies.">
+    <meta property="og:image" content="https://ai.overclockedtech.net/og-image.jpg">
+    <meta property="og:url" content="https://ai.overclockedtech.net/contact.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Get Started | Personal AI Setup">
+    <meta name="twitter:description" content="Get your personal AI assistant today! Free consultation.">
+    <meta name="twitter:image" content="https://ai.overclockedtech.net/og-image.jpg">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER123"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PLACEHOLDER123');
+        
+        // Track contact form events
+        function trackContact(method) {
+            gtag('event', 'contact', {
+                'event_category': 'engagement',
+                'event_label': method,
+                'value': 1
+            });
+        }
+        
+        function trackFormSubmission(product, referral) {
+            gtag('event', 'form_submission', {
+                'event_category': 'lead_generation',
+                'event_label': product,
+                'custom_parameters': {
+                    'referral_source': referral
+                },
+                'value': 1500 // Approximate value of a lead
+            });
+        }
+    </script>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -260,6 +310,10 @@
         e.preventDefault();
         
         const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        
+        // Track form submission
+        trackFormSubmission(data.product || 'unknown', data.referral || 'direct');
         
         try {
             const response = await fetch(form.action, {
@@ -271,6 +325,11 @@
             if (response.ok) {
                 form.style.display = 'none';
                 success.style.display = 'block';
+                // Track successful conversion
+                gtag('event', 'conversion', {
+                    'event_category': 'form_success',
+                    'event_label': data.product || 'unknown'
+                });
             } else {
                 // Fallback: mailto
                 const data = Object.fromEntries(formData);

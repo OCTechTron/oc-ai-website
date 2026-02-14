@@ -1,0 +1,17 @@
+OG Image Placeholder
+
+Create a 1200x630 image with:
+- OC-AI logo/branding
+- Text: "Your Personal AI Assistant"
+- Subtext: "By Overclocked Technologies"
+- Background: Dark theme matching website (#111318)
+- Accent: Blue (#5BA4D9)
+
+Save as: og-image.jpg
+
+This image will appear when people share your website links on social media (Facebook, Twitter, LinkedIn, etc.)
+
+Tools to create:
+- Canva.com (free templates available)
+- Figma.com (free design tool)
+- Or hire a quick design on Fiverr for $5-15
